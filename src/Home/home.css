@@ -1,0 +1,26 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;    
+color: rgb(0, 0, 0);
+}
+
+p {
+font-family: Dancing Script , sans-serif;    
+color: rgb(0, 0, 0);
+}
+.logo {
+max-width: 58px; 
+}
+
+.navbar {
+background-color: rgb(255, 255, 255);
+align-items: center;
+display: flex;
+padding: 1px 50px;
+justify-content: space-between;
+}
+
+.introduction {
+text-align: center;
+margin: 10px;
+padding: 10px;
+}
