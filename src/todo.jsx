@@ -22,5 +22,22 @@ export default function Todo() {
 
         setId(id + 1);
         setAtividade("");
+        
+    const remover = (id) => {
+        const listFilter = [];
+        lista.map((list) => {
+            if (list.id !== id) {
+                listFilter.push(list);
+            }
+        });
+        
+        setLista(listFilter);
+    }
+    return (
+        <div class="container">
+            <Link to="/">home</Link>
+            <h1>Enter Your Data</h1>
+      <p>"you cannot put characters in the password"</p>
+            <form onSubmit={salvar}></form>
 
     
