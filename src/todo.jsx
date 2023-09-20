@@ -22,7 +22,9 @@ export default function Todo() {
 
         setId(id + 1);
         setAtividade("");
-        
+
+    };
+
     const remover = (id) => {
         const listFilter = [];
         lista.map((list) => {
@@ -38,13 +40,14 @@ export default function Todo() {
             <Link to="/">home</Link>
             <h1>Enter Your Data</h1>
       <p>"you cannot put characters in the password"</p>
-            <form onSubmit={salvar}></form>
+            <form onSubmit={salvar}>
 
-            <h4><i>Name</i></h4>  
+                <h4><i>Name</i></h4>  
                 <input type="text"
                     value={name}
                     onChange={(e) => { setName(e.target.value) }} />
                
+          
       
 <h4><i>Email</i></h4>
             <input type="text"
