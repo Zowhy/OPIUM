@@ -40,4 +40,36 @@ export default function Todo() {
       <p>"you cannot put characters in the password"</p>
             <form onSubmit={salvar}></form>
 
-    
+            <h4><i>Name</i></h4>  
+                <input type="text"
+                    value={name}
+                    onChange={(e) => { setName(e.target.value) }} />
+               
+      
+<h4><i>Email</i></h4>
+            <input type="text"
+                    value={email}
+                    onChange={(e) => { setEmail(e.target.value) }} />
+
+<h4><i>Password</i></h4>
+                       <input type="text"
+                    value={password}
+                    onChange={(e) => { setPass(e.target.value) }} />
+<br></br>
+<br></br>
+                <button>ADD</button>
+            </form>
+
+            {lista.map((ativ) =>
+                <ul key={ativ.id}>
+                    <li>
+                        <p>Name: {ativ.name}</p>
+                        <p>Email: {ativ.email}</p>
+                        <p>Password: {ativ.password}</p>
+                        <button onClick={() => remover(ativ.id)}>Remove</button>
+                    </li>
+                </ul>
+            )}
+        </div>
+    );
+}
